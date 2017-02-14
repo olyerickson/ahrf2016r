@@ -1,0 +1,18 @@
+Package: ahrf2016r
+Title: HRSA Area Health Resource Files (2015-2016)
+Version: 0.1
+Authors@R: person("John", "Erickson", email = "olyerickson@gmail.com",
+                  role = c("aut", "cre"))
+Description: County-level and State and National-level data
+Depends: R (>= 3.1.0)
+License: TBD
+LazyData: true
+Imports:
+    purrr,
+    dplyr,
+    stringr,
+    readr, 
+    Hmisc,
+    ggplot2,
+    viridis,
+    SAScii
