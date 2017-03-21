@@ -1,4 +1,4 @@
-# ahrf2016r
+# ahrf2016r: AHHS HRSA Area Health Resource File (2016)
 
 ## About the Data
 **Source** 
@@ -72,4 +72,31 @@ County-level hospital beds in 2016
 > quantile(beds$beds_2016_p10k, na.rm = TRUE)
         0%        25%        50%        75%       100% 
   0.000000   7.366996  20.093600  37.248540 797.016672 
+```
+Geographic Distribution of Hospital Beds
+```
+beds$beds_2016_dist = Hmisc::cut2(beds$beds_2016_p10k, cuts = c(7.63, 20.50, 38.09))
+
+# devtools::install_github("jjchern/usmapdata")
+usmapdata::county %>% 
+  left_join(beds, by = c("id" = "fips")) %>% 
+        mutate(region = id) -> beds_map
+
+usmapdata::state %>% 
+        mutate(region = id) -> state_map
+
+library(ggplot2)
+ggplot() +
+  geom_map(data = beds_map, map = beds_map,
+           aes(x = long, y = lat, map_id = id, fill = beds_2016_dist),
+           colour = alpha("white", 0.1), size=0.2) +
+  geom_map(data = state_map, map = state_map,
+           aes(x = long, y = lat, map_id = region),
+           colour = "white", fill = "NA") +
+  coord_map("albers", lat0 = 30, lat1 = 40) +
+  viridis::scale_fill_viridis(discrete=TRUE, option = "D") +
+  ggtitle("Hospital Beds per 10,000 Population in 2016") +
+  ggthemes::theme_map() +
+  theme(legend.position = c(.85, .3),
+        legend.title=element_blank())
 ```
