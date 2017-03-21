@@ -100,5 +100,5 @@ ggplot() +
   theme(legend.position = c(.85, .3),
         legend.title=element_blank())
 ```
-[[https://raw.githubusercontent.com/olyerickson/ahrf2016r/master/Rplot.png]]
+![Geographic Dsitribution of Hospital Beds (2016)](https://raw.githubusercontent.com/olyerickson/ahrf2016r/master/Rplot.png)
 
