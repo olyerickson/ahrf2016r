@@ -1,4 +1,4 @@
-# ahrf2016r: AHHS HRSA Area Health Resource File (2016)
+# ahrf2016r: R-compatible HHS HRSA Area Health Resource File datasets (2016)
 
 ## About the Data
 **Source** 
@@ -19,6 +19,14 @@ devtools::install_github("olyerickson/ahrf2016r")
 # To uninstall the package, use:
 # remove.packages("ahrf2016r")
 ```
+## Notes for Machine Learning Applications
+The `data` directory contains the full county data, plus training (75% of observations) and test (25%) subsets:
+```
+ahrf_county.rda
+ahrf_county_train.rda
+ahrf_county_test.rda
+```
+
 ## Example Usage
 
 There are 3230 rows and 6921 columns in the county file (wide format)
