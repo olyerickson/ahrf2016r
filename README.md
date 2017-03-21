@@ -100,5 +100,5 @@ ggplot() +
   theme(legend.position = c(.85, .3),
         legend.title=element_blank())
 ```
-[https://github.com/olyerickson/ahrf2016r/blob/master/Rplot.png?raw=true]
+[[https://github.com/olyerickson/ahrf2016r/blob/master/Rplot.png?raw=true]]
 
