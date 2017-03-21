@@ -3,6 +3,7 @@
 ## About the Data
 **Source** 
 United States Department of Health and Human Services Health Resources and Services Administration
+HRSA Data Warehouse: https://datawarehouse.hrsa.gov/data/datadownload.aspx
 
 **Summary**  
 The Area Health Resource File (ARF) is a health resource information database containing more than 6,000 variables for each of the nation's counties. ARF contains information on health facilities, health professions, measures of resource scarcity, health status, economic activity, health training programs, and socioeconomic and environmental characteristics.
