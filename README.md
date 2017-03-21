@@ -1,8 +1,10 @@
-# ahrf2016r: AHHS HRSA Area Health Resource File (2016)
+# ahrf2016r: R-compatible HHS HRSA Area Health Resource File datasets (2016)
 
 ## About the Data
 **Source** 
 United States Department of Health and Human Services Health Resources and Services Administration
+
+HRSA Data Warehouse: https://datawarehouse.hrsa.gov/data/datadownload.aspx
 
 **Summary**  
 The Area Health Resource File (ARF) is a health resource information database containing more than 6,000 variables for each of the nation's counties. ARF contains information on health facilities, health professions, measures of resource scarcity, health status, economic activity, health training programs, and socioeconomic and environmental characteristics.
@@ -17,6 +19,14 @@ devtools::install_github("olyerickson/ahrf2016r")
 # To uninstall the package, use:
 # remove.packages("ahrf2016r")
 ```
+## Notes for Machine Learning Applications
+The `data` directory contains the full county data, plus training (75% of observations) and test (25%) subsets:
+```
+ahrf_county.rda
+ahrf_county_train.rda
+ahrf_county_test.rda
+```
+
 ## Example Usage
 
 There are 3230 rows and 6921 columns in the county file (wide format)
