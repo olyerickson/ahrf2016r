@@ -37,6 +37,14 @@ What columns mention "population"?
 ```
 County-level hospital beds in 2016
 ```
+> ahrf2016r::ahrf_county %>% 
+        select(county = F04437, 
+               fips = F00002, 
+               beds_2016 = F0892113,
+               pop_2016 = F1198415) %>% 
+        mutate(beds_2016 = as.integer(beds_2016),
+               pop_2016 = as.integer(pop_2016),
+               beds_2016_p10k = beds_2016 / pop_2016 * 10000) -> beds
 > beds
 # A tibble: 3,230 × 5
          county  fips beds_2016 pop_2016 beds_2016_p10k
