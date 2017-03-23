@@ -9,6 +9,13 @@ HRSA Data Warehouse: https://datawarehouse.hrsa.gov/data/datadownload.aspx
 **Summary**  
 The Area Health Resource File (ARF) is a health resource information database containing more than 6,000 variables for each of the nation's counties. ARF contains information on health facilities, health professions, measures of resource scarcity, health status, economic activity, health training programs, and socioeconomic and environmental characteristics.
 
+**Detailed information about the AHRF dataset**
+See the files in the `metadata` subdirectory:
+* AHRF User Guide: http://bit.ly/2ngOWBw
+* AHRF Technical Documentation (Data Dictionary): http://bit.ly/2mY3pzS
+* Health Care Disparities in Rural Areas Fact Sheet: http://bit.ly/2nrsPZw
+* National Health Care Quality Report: http://bit.ly/2nMRTvf
+
 ## Installation
 
 This repository is designed to download *and install* the datasets as an R package. The size of ahrf_county.rda is 24.2 MB, so it might take a while to install and load into memory.
