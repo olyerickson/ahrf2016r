@@ -33,11 +33,14 @@ ahrf_county.rda
 ahrf_county_train.rda
 ahrf_county_test.rda
 ```
-NOTE: Only `ahrf_county_train.rda` will be available before and during the 2017 RPI Datathon; `ahrf_county.rda` and `ahrf_count_test.rda` will become available after 26 Mar 2017. 
+NOTE: 
+* Only `ahrf_county_train.rda` will be available before and during the 2017 RPI Datathon (25-26 Mar 2017)
+* `ahrf_county.rda` and `ahrf_count_test.rda` will become available after 26 Mar 2017
 
 ## Example Usage
 
 There are 3230 rows and 6921 columns in the full county file (wide format): 
+
 NOTE: Substitute `ahrf_county_train` as needed...
 ```
 library(dplyr, warn.conflicts = FALSE)
